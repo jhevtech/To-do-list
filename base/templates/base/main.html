@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do Items</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: #c2dfd9;
+            font-family: "Nunito", sans-serif;
+            padding-top: 50px;
+            max-width: 550px;
+            max-height: 550px;
+            place-content: center;
+            
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+            {
+                font-family: 'Raleway', sans-serif;
+            }
+
+        a,
+        p {
+            color:rgba(6, 28, 40, 0.866)
+        }
+
+        a{
+            font-weight: 600;
+        }
+        .container{
+            
+            display:center;
+            max-width: 550px;
+            align-items: center;
+            justify-items: left;
+            background-color: rgba#199e81;
+            -webkit-box-shadow: 3px 3px 15px -5px rgba(247, 143, 7, 0.968);
+            box-shadow: 4px 4px 25px -4px rgba(227, 153, 4, 0.858);
+        }
+       /* 7, 195, 247, 0.351
+       8, 200, 229*/
+
+       
+        .header-bar{
+            display: flex;
+            justify-content: space-between;
+            color:#106f5b;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+            background: linear-gradient(90deg, #199e81 0%, #c7ba6d 43%, #c6a269 100%);
+        }
+
+        .header-bar a {
+            color:rgba(6, 28, 40, 0.866);
+            text-decoration: none;
+        }
+
+        .task-wrapper {
+            /*align-content: center;*/
+            display: center;
+            place-items:  left;
+            align-items: center;
+            justify-content: space-between; 
+            background-color: #199e81;
+            border-top: 1px solid rgba(6, 28, 40, 0.866);
+        }
+
+        .task-title {
+            display: flex;
+
+        }
+
+        .task-title a{
+            text-decoration: none;
+            color:rgba(6, 28, 40, 0.866);
+            margin-left: 10px;
+        }
+
+        .task-complete-icon {
+            height: 15px;
+            width: 15px;
+            background-color:#c7ba6d;
+            border-radius: 50%;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+        
+        .task-incomplete-icon {
+            
+            margin-top: 5px;
+            height: 15px;
+            width: 15px;
+            background-color:rgb(92, 120, 110);
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+
+        .delete-link {
+            text-decoration: none;
+            font-weight: 900;
+            color: rgb(120, 52, 52);
+            font-size:22px;
+            line-height: 0;
+            margin-left: 525px;
+            
+        }
+
+    
+        #search-add-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #199e81;
+        }
+
+        #add-link {
+            color:rgba(7, 195, 247, 0.21);
+            text-decoration: none;
+            font-size: 42px;
+            text-shadow: 1px 1px rgba(6, 28, 40, 0.866);
+        }
+
+        input[type=text],
+        input[type=password],
+        textarea {
+            border: 1px solid #199e81;
+            border-radius: 5px;
+            padding: 10px;
+            width: 90%;
+        }
+
+        label {
+            padding-top: 10px !important;
+            display: block;
+        }
+
+        .button {
+            border: 1px solid #199e81;
+            background-color:rgba(11, 97, 111, 0.749);
+            color:#199e81;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+</body>
+</html>
